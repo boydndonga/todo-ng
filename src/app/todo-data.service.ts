@@ -32,4 +32,30 @@ export class TodoDataService {
   //   }
   //   return this;
   // }
+
+  getTodoById(id: number): Todo {
+    return this.todos
+      .filter(todo => todo.id === id)
+      .pop();
+  }
+
+  // getTodoById(id: number): Todo {
+  //     for (const todo of this.todos) {
+  //       if (todo.id === id) {
+  //           return todo;
+  //       }
+  // }
+
+  // updateTodoById(id: number, values: Object = {}): Todo {
+  //   const todo = this.getTodoById(id);
+  //   if (!todo) {
+  //     return null;
+  //   }
+  //   Object.assign(todo, values);
+  //   return todo;
+  // }
+
+  getAllTodos(): Todo[] {
+    return this.todos;
+  }
 }
