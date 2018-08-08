@@ -79,4 +79,13 @@ describe('TodoDataService', () => {
     }));
   });
 
+  it('should return null if todo is not found', inject([TodoDataService], (service: TodoDataService) => {
+    const todo = new Todo({title: 'Hello 1', complete: false});
+    service.addTodo(todo);
+    const updatedTodo = service.updateTodoById(2, {
+      title: 'new title'
+    });
+    expect(updatedTodo).toEqual(null);
+  }));
+
 });
