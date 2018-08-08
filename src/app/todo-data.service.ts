@@ -7,6 +7,15 @@ import { Todo } from './todo';
 export class TodoDataService {
 
   public lastId: number = 0;
-  public todo: Todo[] = [];
+  public todos: Todo[] = [];
+
   constructor() { }
+
+  addTodo(todo: Todo): TodoDataService {
+    if (!todo.id) {
+      todo.id = ++this.lastId;
+    }
+    this.todos.push(todo);
+    return this;
+  }
 }
