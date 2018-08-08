@@ -25,6 +25,7 @@ export class TodoDataService {
     return this;
   }
 
+    // error in this alternative
   // deleteTodoById(id: number): TodoDataService {
   //   const toDelete = confirm(`Are you sure you want to delete ${this.todos[id].title}`);
   //   if (toDelete) {
@@ -39,6 +40,7 @@ export class TodoDataService {
       .pop();
   }
 
+    // working alternative
   // getTodoById(id: number): Todo {
   //     for (const todo of this.todos) {
   //       if (todo.id === id) {
