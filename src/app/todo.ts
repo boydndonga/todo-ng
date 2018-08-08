@@ -1,6 +1,6 @@
 export class Todo {
   public id: number;
-  public title: string = '';
+  public title: string;
   public complete: boolean = false;
 
   constructor(values: Object= {} ) {
