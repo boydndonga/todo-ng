@@ -18,4 +18,18 @@ export class TodoDataService {
     this.todos.push(todo);
     return this;
   }
+
+  deleteTodoById(id: number): TodoDataService {
+    this.todos = this.todos
+      .filter(todo => todo.id !== id);
+    return this;
+  }
+
+  // deleteTodoById(id: number): TodoDataService {
+  //   const toDelete = confirm(`Are you sure you want to delete ${this.todos[id].title}`);
+  //   if (toDelete) {
+  //       this.todos.splice(id, 1);
+  //   }
+  //   return this;
+  // }
 }
