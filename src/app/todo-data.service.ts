@@ -46,14 +46,14 @@ export class TodoDataService {
   //       }
   // }
 
-  // updateTodoById(id: number, values: Object = {}): Todo {
-  //   const todo = this.getTodoById(id);
-  //   if (!todo) {
-  //     return null;
-  //   }
-  //   Object.assign(todo, values);
-  //   return todo;
-  // }
+  updateTodoById(id: number, values: Object = {}): Todo {
+    const todo = this.getTodoById(id);
+    if (!todo) {
+      return null;
+    }
+    Object.assign(todo, values);
+    return todo;
+  }
 
   getAllTodos(): Todo[] {
     return this.todos;
