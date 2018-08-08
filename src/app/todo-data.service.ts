@@ -58,4 +58,12 @@ export class TodoDataService {
   getAllTodos(): Todo[] {
     return this.todos;
   }
+
+  toggleTodoComplete(todo: Todo) {
+    const updatedTodo = this.updateTodoById(todo.id, {
+      complete: !todo.complete
+    });
+    return updatedTodo;
+  }
+
 }
